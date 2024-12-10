@@ -13,11 +13,13 @@ const Header = () => {
   const selectedUserName = useSelector(getSelectedUserName);
   const repos = useSelector(getRepoList);
 
-  const { stars, forks } = repos.reduce((acc, repo) => {
-    acc.stars += repo.watchers;
-    acc.forks += repo.forks;
+  const { stars, forks, watchers } = repos.reduce((acc, repo) => {
+    acc.forks += repo.forks_count;
+    acc.stars += repo.stargazers_count;
+    acc.watchers += repo.watchers_count;
+
     return acc;
-  }, { stars: 0, forks: 0 });
+  }, { stars: 0, forks: 0, watchers: 0 });
 
   useEffect(() => {
     if (selectedUserName) dispatch(fetchRepos());
@@ -58,7 +60,7 @@ const Header = () => {
           </button>
         </div>
         <div className={styles.stats}>
-          <RepoStats stars={stars} forks={forks} />
+          <RepoStats stars={stars} forks={forks} watchers={watchers} />
         </div>
       </div>
     </div>
