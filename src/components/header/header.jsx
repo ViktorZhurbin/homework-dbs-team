@@ -4,22 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./header.module.css";
 import logo from "./../../gitHub-mark-64px.png";
 import { fetchRepos, setSelectedUserName } from "../../store/actions/repos";
-import { getRepoList, getSelectedUserName } from "../../store/selectors/selectors";
-import RepoStats from "../repo-list/ui/repo-stats/repo-stats";
+import { getSelectedUserName } from "../../store/selectors/selectors";
+import TotalStats from "../stats/total-stats";
 
 const Header = () => {
   const dispatch = useDispatch();
 
   const selectedUserName = useSelector(getSelectedUserName);
-  const repos = useSelector(getRepoList);
-
-  const { stars, forks, watchers } = repos.reduce((acc, repo) => {
-    acc.forks += repo.forks_count;
-    acc.stars += repo.stargazers_count;
-    acc.watchers += repo.watchers_count;
-
-    return acc;
-  }, { stars: 0, forks: 0, watchers: 0 });
 
   useEffect(() => {
     if (selectedUserName) dispatch(fetchRepos());
@@ -60,7 +51,7 @@ const Header = () => {
           </button>
         </div>
         <div className={styles.stats}>
-          <RepoStats stars={stars} forks={forks} watchers={watchers} />
+          <TotalStats />
         </div>
       </div>
     </div>

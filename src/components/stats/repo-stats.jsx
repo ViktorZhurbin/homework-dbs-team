@@ -1,5 +1,6 @@
 import React from "react";
-import LabeledIcon from "../labeled-icon/labeled-icon";
+
+import LabeledIcon from "../repo-list/ui/labeled-icon/labeled-icon";
 
 const RepoStats = ({ stars, forks, watchers }) => {
   if (!JSON.parse(process.env.SHOW_REPO_STATS)) {
