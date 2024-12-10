@@ -16,7 +16,7 @@ const initialState = {
   error: null,
   selectedRepo: null,
   selectedPage: 1,
-  selectedUserName: "",
+  selectedUserName: "ericelliott",
 };
 
 const _fetchRepos = (state) => ({

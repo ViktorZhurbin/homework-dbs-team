@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./header.module.css";
@@ -10,6 +10,10 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const selectedUserName = useSelector(getSelectedUserName);
+
+  useEffect(() => {
+    if (selectedUserName) dispatch(fetchRepos());
+  }, [])
 
   const handleSearchTextChange = useCallback(
     (event) => {
