@@ -85,6 +85,8 @@ function getClientEnvironment(publicUrl) {
         WDS_SOCKET_HOST: process.env.WDS_SOCKET_HOST,
         WDS_SOCKET_PATH: process.env.WDS_SOCKET_PATH,
         WDS_SOCKET_PORT: process.env.WDS_SOCKET_PORT,
+
+        SHOW_REPO_STATS: process.env.SHOW_REPO_STATS,
         GITHUB_AUTH_TOKEN: process.env.GITHUB_AUTH_TOKEN,
       }
     );

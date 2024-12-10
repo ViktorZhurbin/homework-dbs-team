@@ -5,6 +5,7 @@ import styles from "./header.module.css";
 import logo from "./../../gitHub-mark-64px.png";
 import { fetchRepos, setSelectedUserName } from "../../store/actions/repos";
 import { getRepoList, getSelectedUserName } from "../../store/selectors/selectors";
+import RepoStats from "../repo-list/ui/repo-stats/repo-stats";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -57,8 +58,7 @@ const Header = () => {
           </button>
         </div>
         <div className={styles.stats}>
-          <b>Stars: {stars},</b>
-          <b>Forks: {forks}</b>
+          <RepoStats stars={stars} forks={forks} />
         </div>
       </div>
     </div>
