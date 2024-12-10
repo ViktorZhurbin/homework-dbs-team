@@ -21,7 +21,13 @@ export function* fetchReposSaga(action) {
     selectedPage +
     "&per_page=15";
   try {
-    const response = yield fetch(url);
+    const fetchOptions = process.env.GITHUB_AUTH_TOKEN ? {
+      header: {
+        Authorization: `Bearer ${process.env.GITHUB_AUTH_TOKEN}`,
+      }
+    } : undefined;
+
+    const response = yield fetch(url, fetchOptions);
     const resObj = yield response.json();
 
     if (response.status >= 200 && response.status < 300) {
