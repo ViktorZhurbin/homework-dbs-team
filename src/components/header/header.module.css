@@ -46,3 +46,14 @@
 .icon {
   margin-right: 5px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: 8px;
+}
