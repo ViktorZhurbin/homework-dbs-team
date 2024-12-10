@@ -6,6 +6,10 @@
   gap: 10px;
 }
 
+.repoPreview.hasStars {
+  border-color: yellow;
+}
+
 .stats {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,1 @@
+export const showRepoStats = JSON.parse(process.env.SHOW_REPO_STATS)
