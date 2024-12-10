@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 
 import './index.css';
@@ -10,11 +10,14 @@ import App from './App';
 import reposReducer from "./store/reducers/repos";
 import { watchRepos } from "./store/sagas";
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   reposReducer,
-  applyMiddleware(sagaMiddleware)
+  composeEnhancers(
+    applyMiddleware(sagaMiddleware)
+  )
 );
 
 sagaMiddleware.run(watchRepos);
