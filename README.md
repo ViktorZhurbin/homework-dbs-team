@@ -13,3 +13,6 @@ Node version 16 is required to build this project.
 
 ## Feature flags
 Copy `.env.example` to `.env` and set the values to turn feature flags on or off.
+
+## Demo
+https://homework-dbs-team.pages.dev/
