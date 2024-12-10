@@ -14,6 +14,8 @@ const Header = () => {
 
   useEffect(() => {
     if (selectedUserName) dispatch(fetchRepos());
+    // only run once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleSearchTextChange = useCallback(
