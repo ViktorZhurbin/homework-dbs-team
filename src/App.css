@@ -30,11 +30,6 @@ button:disabled {
   cursor: initial;
 }
 
-.title {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .box {
   width: 50%;
   padding: 20px;

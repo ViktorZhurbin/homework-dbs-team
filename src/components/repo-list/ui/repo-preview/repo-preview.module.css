@@ -1,13 +1,19 @@
 .repoPreview {
   margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
-
-.icon {
-  width: 30px !important;
 }

@@ -9,3 +9,19 @@
 .container button {
     margin-top: 50px;
 }
+
+.repo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats {
+    display: flex;
+    gap: 4px;
+}

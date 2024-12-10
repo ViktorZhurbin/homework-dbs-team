@@ -1,0 +1,9 @@
+.labeledIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon {
+  width: 20px;
+}
