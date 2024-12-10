@@ -1,0 +1,7 @@
+.emptyList {
+  font-size: 2em;
+  color: #aaa;
+  margin: 50px;
+  text-align: center;
+  flex-grow: 1;
+}

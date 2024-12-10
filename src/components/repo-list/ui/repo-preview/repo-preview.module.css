@@ -1,0 +1,13 @@
+.repoPreview {
+  margin-top: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.icon {
+  width: 30px !important;
+}

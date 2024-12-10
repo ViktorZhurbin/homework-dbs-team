@@ -1,0 +1,77 @@
+input {
+  border-radius: 10px;
+  border: 1px solid #00000022;
+  padding: 5px 10px;
+  margin-right: 0;
+  width: 300px;
+}
+
+input:active,
+input:focus,
+button:active,
+button:focus {
+  border: 1px solid #00000066;
+  outline: none;
+}
+
+button {
+  background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
+  color: #fff;
+  border-radius: 0.25em;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: initial;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.box {
+  width: 50%;
+  padding: 20px;
+  filter: drop-shadow(2px 4px 6px #00000022);
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+}
+
+.box--wide {
+  width: 75%;
+}
+
+.loader {
+  border: 8px solid #258c3e;
+  border-radius: 50%;
+  border-top: 8px solid #33cf57;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

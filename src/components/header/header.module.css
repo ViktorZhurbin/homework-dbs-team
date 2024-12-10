@@ -1,0 +1,48 @@
+.header {
+  background: #f5f5f5;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(2px 4px 6px #00000033);
+  padding: 10px 30px;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+.header > img {
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  overflow: hidden;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    margin: 16px;
+  }
+}
+
+.header input {
+  flex: 1;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .header input {
+    width: auto;
+  }
+}
+
+.icon {
+  margin-right: 5px;
+}

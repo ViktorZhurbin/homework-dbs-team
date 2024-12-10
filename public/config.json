@@ -1,0 +1,7 @@
+{
+  "features": {
+    "displayStars": true,
+    "displayForks": true,
+    "displayWatchers": true
+  }
+}
