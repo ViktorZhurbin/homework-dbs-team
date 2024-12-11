@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./repo-preview.module.css";
-import RepoStats from "../../../stats/repo-stats";
+import RepoStats from "../../../stats/repo-stats/repo-stats";
 import { showRepoStats } from "../../../../utils/featureFlags";
 
 const RepoPreview = (props) => {

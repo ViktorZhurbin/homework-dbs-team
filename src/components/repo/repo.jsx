@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./repo.module.css";
-import RepoStats from "../stats/repo-stats";
+import RepoStats from "../stats/repo-stats/repo-stats";
 
 const Repo = ({ onBack, repoData: { name, description, forks_count, stargazers_count } }) => (
   <div className={styles.container}>

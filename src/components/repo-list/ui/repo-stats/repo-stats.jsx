@@ -1,10 +1,8 @@
 import React from "react";
-
-import LabeledIcon from "../repo-list/ui/labeled-icon/labeled-icon";
-import { showRepoStats } from "../../utils/featureFlags";
+import LabeledIcon from "../../../stats/repo-stats/ui/labeled-icon/labeled-icon";
 
 const RepoStats = ({ stars, forks, watchers }) => {
-  if (!showRepoStats) {
+  if (!JSON.parse(process.env.SHOW_REPO_STATS)) {
     return null;
   }
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { getRepoList } from "../../store/selectors/selectors";
-import RepoStats from "./repo-stats";
+import RepoStats from "./repo-stats/repo-stats";
 
 const TotalStats = () => {
   const repos = useSelector(getRepoList);
